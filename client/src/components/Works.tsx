@@ -10,8 +10,8 @@ const projectsData = [
     overlayTitle: "Chat Application",
     overlayDescription: "A real-time chat application with authentication, MongoDB-based storage, and instant messaging using Socket.io.",
     technologies: ["React", "Node.js", "Express", "MongoDB", "Socket.io"],
-    liveLink: "#",
-    githubLink: "#",
+    liveLink: "https://chat-app-tan-six-70.vercel.app/",
+    githubLink: "https://github.com/Harshitjoshi133/ChatApp",
   },
   {
     id: 2,
@@ -21,7 +21,7 @@ const projectsData = [
     overlayTitle: "Move with Aman",
     overlayDescription: "A subscription-based SaaS fitness platform offering workout plans, personalized coaching, and video content.",
     technologies: ["Next.js", "Stripe", "Firebase", "Tailwind CSS"],
-    liveLink: "#",
+    liveLink: "https://mwa-frontend.onrender.com/",
     githubLink: "#",
   },
   {
@@ -32,8 +32,8 @@ const projectsData = [
     overlayTitle: "HouseHold Management",
     overlayDescription: "Household task manager with role-based access control, reminders, and analytics dashboard.",
     technologies: ["Vue.js", "Flask", "Redis", "SQLite", "Chart.js"],
-    liveLink: "#",
-    githubLink: "#",
+    liveLink: "https://house-hold-one.vercel.app/",
+    githubLink: "https://github.com/Harshitjoshi133/HouseHold",
   },
   {
     id: 4,
@@ -43,19 +43,8 @@ const projectsData = [
     overlayTitle: "Firebase Contact App",
     overlayDescription: "A CRUD contact manager app using Firebase Realtime Database and Authentication.",
     technologies: ["React", "Firebase Auth", "Firebase Realtime DB", "Bootstrap"],
-    liveLink: "#",
-    githubLink: "#",
-  },
-  {
-    id: 5,
-    title: "Naini Travel",
-    description: "Nainital tourism guide app",
-    imageUrl: "https://images.unsplash.com/photo-1599058917212-d750089bc07e?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400&q=80",
-    overlayTitle: "Naini Travel App",
-    overlayDescription: "A travel app for Nainital featuring trip planning, local experiences, reviews, maps, and chatbot support.",
-    technologies: ["Android", "Firebase", "Google Maps API", "Gemini AI"],
-    liveLink: "#",
-    githubLink: "#",
+    liveLink: "https://contact-app-two-theta.vercel.app/",
+    githubLink: "https://github.com/Harshitjoshi133/Contact-App",
   },
   {
     id: 6,
@@ -65,7 +54,7 @@ const projectsData = [
     overlayTitle: "Marks Management System",
     overlayDescription: "Student marking system with role-based access, branch allocation, performance tracking, and report generation.",
     technologies: ["FastAPI", "Firebase", "HTML", "CSS", "JavaScript"],
-    liveLink: "#",
+    liveLink: "https://batch-marks-system.vercel.app/",
     githubLink: "#",
   }
 ];
@@ -125,18 +114,19 @@ const Works = () => {
                   <h3 className="font-montserrat font-bold text-xl mb-2">{project.title}</h3>
                   <p className="text-gray-600 mb-4">{project.description}</p>
                   <div className="flex justify-between">
-                    <a href={project.liveLink} target="_blank" rel="noopener noreferrer" className="text-primary font-medium hover:underline flex items-center">
+                    {project.liveLink=="#"?"":<a href={project.liveLink} target="_blank" rel="noopener noreferrer" className="text-primary font-medium hover:underline flex items-center">
                       Live Link
                       <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
                       </svg>
-                    </a>
-                    <a href={project.githubLink} target="_blank" rel="noopener noreferrer" className="text-primary font-medium hover:underline flex items-center">
+                    </a>}
+                    
+                    {project.githubLink=="#"?"":<a href={project.githubLink} target="_blank" rel="noopener noreferrer" className="text-primary font-medium hover:underline flex items-center">
                       GitHub
                       <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
                       </svg>
-                    </a>
+                    </a>}
                   </div>
                 </div>
               </motion.div>

@@ -17,6 +17,7 @@ function Router() {
 }
 
 function App() {
+  // Import the test component
   return (
     <QueryClientProvider client={queryClient}>
       <TooltipProvider>

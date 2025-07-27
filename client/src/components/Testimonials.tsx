@@ -5,21 +5,22 @@ const testimonials = [
     name: "Daksh Khosla",
     position: "Client",
     image: "https://media.licdn.com/dms/image/D5603AQH29ZJ7Q4ZJ7A/profile-displayphoto-shrink_400_400/0/1718864327549?e=1727308800&v=beta&t=jR9aYl2Q2R9lY2Q2R9lY2Q2R9lY2Q2R9lY2Q2R9lY",
-    quote: "Harshit is a very talented and hardworking individual. He is a quick learner and has a great attitude. He is a great team player and is always ready to help others. I wish him all the best for his future endeavors."
+    quote: "Working with Harshit was a seamless experience. His problem-solving skills and dedication to our project truly stood out. A reliable and driven developer!"
   },
   {
     name: "Vaibhav Bhatt",
     position: "Client",
     image: "https://media.licdn.com/dms/image/D5603AQH29ZJ7Q4ZJ7A/profile-displayphoto-shrink_400_400/0/1718864327549?e=1727308800&v=beta&t=jR9aYl2Q2R9lY2Q2R9lY2Q2R9lY2Q2R9lY2Q2R9lY",
-    quote: "Harshit is a very talented and hardworking individual. He is a quick learner and has a great attitude. He is a great team player and is always ready to help others. I wish him all the best for his future endeavors."
-  },
-  {
-    name: "Aman Bassi",
-    position: "Client",
-    image: "https://media.licdn.com/dms/image/D5603AQH29ZJ7Q4ZJ7A/profile-displayphoto-shrink_400_400/0/1718864327549?e=1727308800&v=beta&t=jR9aYl2Q2R9lY2Q2R9lY2Q2R9lY2Q2R9lY2Q2R9lY",
-    quote: "Harshit is a very talented and hardworking individual. He is a quick learner and has a great attitude. He is a great team player and is always ready to help others. I wish him all the best for his future endeavors."
+    quote: "Harshit impressed me with his professionalism and commitment. He quickly understood our needs and delivered high-quality results ahead of time. Highly recommended!"
   }
+  // {
+  //   name: "Aman Bassi",
+  //   position: "Client",
+  //   image: "https://media.licdn.com/dms/image/D5603AQH29ZJ7Q4ZJ7A/profile-displayphoto-shrink_400_400/0/1718864327549?e=1727308800&v=beta&t=jR9aYl2Q2R9lY2Q2R9lY2Q2R9lY2Q2R9lY2Q2R9lY",
+  //   quote: "Harshit's ability to break down complex challenges and provide simple, efficient solutions is what makes him a standout developer. I look forward to working with him again."
+  // }
 ];
+
 
 const Testimonials = () => {
   return (

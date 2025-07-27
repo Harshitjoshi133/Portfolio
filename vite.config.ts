@@ -7,11 +7,10 @@ export default defineConfig({
   resolve: {
     alias: {
       '@': path.resolve(__dirname, './client/src'),
-      '@assets': path.resolve(__dirname, './client/public/assets')
     }
   },
-  root: path.resolve(__dirname, './client'),
-  base: './',
+  root: 'client',
+  envDir: '..',
   build: {
     outDir: '../dist',
     emptyOutDir: true
