@@ -6,13 +6,21 @@ const Hero = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col items-center mb-8">
           <motion.h2 
-            className="font-montserrat text-xl md:text-2xl text-dark mb-4 text-center"
+            className="font-montserrat text-2xl md:text-3xl text-dark mb-4 text-center"
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
             HI THERE, I'M Harshit Joshi
           </motion.h2>
+          <motion.p
+            className="text-lg text-gray-700 mb-8 max-w-2xl mx-auto"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.5 }}
+          >
+            Full Stack Developer | MERN | Spring Boot | FastAPI
+          </motion.p>
         </div>
 
         <div className="relative">
@@ -37,7 +45,7 @@ const Hero = () => {
               {/* Overlaid text on image */}
               <div className="absolute inset-0 flex items-center justify-start p-8 lg:p-16">
                 <motion.h1 
-                  className="font-montserrat font-extrabold text-5xl md:text-6xl lg:text-8xl text-primary leading-tight z-10"
+                  className="font-montserrat font-extrabold text-6xl md:text-7xl lg:text-9xl text-primary leading-tight z-10"
                   initial={{ opacity: 0, x: -30 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.8, delay: 0.3 }}
@@ -52,18 +60,18 @@ const Hero = () => {
         
         <div className="mt-12 text-center">
           <motion.p 
-            className="text-lg text-gray-700 mb-8 max-w-2xl mx-auto"
+            className="text-xl text-gray-700 mb-8 max-w-2xl mx-auto"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.5 }}
           >
-           I am a passionate Full Stack and AI Developer crafting responsive, accessible, and robust web experiences that blend creativity, functionality, with the power of artificial intelligence.
+           Crafting Scalable Web Experiences with Modern Technologies
           </motion.p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <motion.a
               href="#works"
-              className="bg-primary text-white px-6 py-3 rounded font-medium hover:bg-opacity-90 transition duration-300 text-center"
+              className="border-2 border-primary text-primary px-6 py-3 rounded font-medium hover:bg-primary hover:text-white transition duration-300 text-center"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >

@@ -123,27 +123,27 @@ const Contact = () => {
               <div className="flex space-x-4">
                 <motion.a 
                   href="#" 
-                  className="w-10 h-10 bg-primary rounded-full flex items-center justify-center text-white hover:bg-opacity-90 transition duration-300"
+                  className="w-12 h-12 bg-primary rounded-full flex items-center justify-center text-white hover:bg-opacity-90 transition duration-300"
                   whileHover={{ scale: 1.1 }}
                   whileTap={{ scale: 0.9 }}
                 >
-                  <FaTwitter className="w-5 h-5" />
+                  <FaTwitter className="w-6 h-6" />
                 </motion.a>
                 <motion.a 
                   href="#" 
-                  className="w-10 h-10 bg-primary rounded-full flex items-center justify-center text-white hover:bg-opacity-90 transition duration-300"
+                  className="w-12 h-12 bg-primary rounded-full flex items-center justify-center text-white hover:bg-opacity-90 transition duration-300"
                   whileHover={{ scale: 1.1 }}
                   whileTap={{ scale: 0.9 }}
                 >
-                  <FaLinkedinIn className="w-5 h-5" />
+                  <FaLinkedinIn className="w-6 h-6" />
                 </motion.a>
                 <motion.a 
                   href="#" 
-                  className="w-10 h-10 bg-primary rounded-full flex items-center justify-center text-white hover:bg-opacity-90 transition duration-300"
+                  className="w-12 h-12 bg-primary rounded-full flex items-center justify-center text-white hover:bg-opacity-90 transition duration-300"
                   whileHover={{ scale: 1.1 }}
                   whileTap={{ scale: 0.9 }}
                 >
-                  <FaGithub className="w-5 h-5" />
+                  <FaGithub className="w-6 h-6" />
                 </motion.a>
               </div>
             </div>
@@ -156,7 +156,7 @@ const Contact = () => {
             transition={{ duration: 0.6, delay: 0.2 }}
           >
             <form 
-              className="bg-white p-8 rounded-lg shadow-lg"
+              className="bg-white p-10 rounded-xl shadow-2xl"
               onSubmit={handleSubmit}
             >
               <h3 className="font-montserrat font-bold text-2xl mb-6">Send Me A Message</h3>

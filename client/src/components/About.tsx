@@ -1,31 +1,31 @@
 import { motion } from "framer-motion";
 import { 
-  MessageSquare, 
-  Sliders, 
-  Zap, 
-  Scale 
+  Code,
+  Server,
+  PenTool,
+  Zap,
 } from "lucide-react";
 
 const skillsData = [
   {
-    icon: <MessageSquare className="w-5 h-5 text-white" />,
+    icon: <Code className="w-6 h-6 text-white" />,
     title: "Frontend Dev",
     description: "Creating responsive, accessible web interfaces with modern frameworks."
   },
   {
-    icon: <Sliders className="w-5 h-5 text-white" />,
-    title: "UX/UI Design",
+    icon: <Server className="w-6 h-6 text-white" />,
+    title: "Backend Dev",
+    description: "Building scalable and efficient server-side applications and APIs."
+  },
+  {
+    icon: <PenTool className="w-6 h-6 text-white" />,
+    title: "UI/UX Design",
     description: "Crafting intuitive and visually appealing user experiences."
   },
   {
-    icon: <Zap className="w-5 h-5 text-white" />,
+    icon: <Zap className="w-6 h-6 text-white" />,
     title: "Performance",
     description: "Optimizing website speed and responsiveness for all devices."
-  },
-  {
-    icon: <Scale className="w-5 h-5 text-white" />,
-    title: "Accessibility",
-    description: "Ensuring web applications are usable by people of all abilities."
   }
 ];
 
@@ -67,7 +67,7 @@ const About = () => {
               PASSIONATE<br />ABOUT<br />DEVELOPMENT
             </h2>
             <p className="text-lg text-gray-700 mb-6">
-              With over 5 years of experience in frontend development, I specialize in creating intuitive user interfaces and seamless web experiences that merge aesthetics with functionality.
+              I specialize in building backend systems, scalable APIs, and intuitive UIs. I love turning ideas into production-grade apps.
             </p>
             <p className="text-lg text-gray-700 mb-8">
               My approach combines technical expertise with creative problem-solving to deliver solutions that exceed client expectations while prioritizing accessibility and performance.
@@ -78,14 +78,14 @@ const About = () => {
               {skillsData.map((skill, index) => (
                 <motion.div 
                   key={index}
-                  className="bg-secondary p-6 rounded-lg"
+                  className="bg-secondary p-6 rounded-lg transition-transform duration-300 hover:scale-105 hover:shadow-xl"
                   initial={{ opacity: 0, y: 10 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.4, delay: index * 0.1 }}
                 >
                   <div className="flex items-center mb-3">
-                    <div className="w-10 h-10 bg-primary rounded-full flex items-center justify-center mr-3">
+                    <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center mr-4 transition-transform duration-300 group-hover:scale-110">
                       {skill.icon}
                     </div>
                     <h3 className="font-montserrat font-bold text-lg">{skill.title}</h3>

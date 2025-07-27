@@ -1,5 +1,6 @@
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
+
 const projectsData = [
   {
     id: 1,
@@ -7,35 +8,65 @@ const projectsData = [
     description: "Real Time Chatting application",
     imageUrl: "https://images.unsplash.com/photo-1599058917212-d750089bc07e?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400&q=80",
     overlayTitle: "Chat Application",
-    overlayDescription: "A Real Time Chatting application with authentication and real time messaging.",
+    overlayDescription: "A real-time chat application with authentication, MongoDB-based storage, and instant messaging using Socket.io.",
     technologies: ["React", "Node.js", "Express", "MongoDB", "Socket.io"],
+    liveLink: "#",
+    githubLink: "#",
   },
   {
     id: 2,
-    title: "HouseHold Management System",
-    description: "HouseHold Management System",
-    imageUrl: "https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400&q=80",
-    overlayTitle: "HouseHold Management System",
-    overlayDescription: "A HouseHold Management System with role based access control, task management, and notification system.",
-    technologies: ["Vue.js", "Flask", "Redis", "SQLite","Chart.js"],
+    title: "Move with Aman - SaaS Platform",
+    description: "Fitness & Wellness Platform",
+    imageUrl: "https://images.unsplash.com/photo-1599058917212-d750089bc07e?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400&q=80",
+    overlayTitle: "Move with Aman",
+    overlayDescription: "A subscription-based SaaS fitness platform offering workout plans, personalized coaching, and video content.",
+    technologies: ["Next.js", "Stripe", "Firebase", "Tailwind CSS"],
+    liveLink: "#",
+    githubLink: "#",
   },
   {
     id: 3,
-    title: "TRADITIONAL INSIGHTS",
-    description: "Data visualization platform",
-    imageUrl: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400&q=80",
-    overlayTitle: "Analytics Dashboard",
-    overlayDescription: "An interactive dashboard for visualizing complex data with customizable widgets.",
-    technologies: ["React", "D3.js", "Node.js"],
+    title: "HouseHold Management System",
+    description: "Manage daily household activities",
+    imageUrl: "https://images.unsplash.com/photo-1599058917212-d750089bc07e?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400&q=80",
+    overlayTitle: "HouseHold Management",
+    overlayDescription: "Household task manager with role-based access control, reminders, and analytics dashboard.",
+    technologies: ["Vue.js", "Flask", "Redis", "SQLite", "Chart.js"],
+    liveLink: "#",
+    githubLink: "#",
   },
-   {
+  {
     id: 4,
-    title: "TRADITIONAL INSIGHTS",
-    description: "Data visualization platform",
-    imageUrl: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400&q=80",
-    overlayTitle: "Analytics Dashboard",
-    overlayDescription: "An interactive dashboard for visualizing complex data with customizable widgets.",
-    technologies: ["React", "D3.js", "Node.js"],
+    title: "Firebase Contact App",
+    description: "Contact management application",
+    imageUrl: "https://images.unsplash.com/photo-1599058917212-d750089bc07e?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400&q=80",
+    overlayTitle: "Firebase Contact App",
+    overlayDescription: "A CRUD contact manager app using Firebase Realtime Database and Authentication.",
+    technologies: ["React", "Firebase Auth", "Firebase Realtime DB", "Bootstrap"],
+    liveLink: "#",
+    githubLink: "#",
+  },
+  {
+    id: 5,
+    title: "Naini Travel",
+    description: "Nainital tourism guide app",
+    imageUrl: "https://images.unsplash.com/photo-1599058917212-d750089bc07e?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400&q=80",
+    overlayTitle: "Naini Travel App",
+    overlayDescription: "A travel app for Nainital featuring trip planning, local experiences, reviews, maps, and chatbot support.",
+    technologies: ["Android", "Firebase", "Google Maps API", "Gemini AI"],
+    liveLink: "#",
+    githubLink: "#",
+  },
+  {
+    id: 6,
+    title: "Batch Marks Management System",
+    description: "Academic marking & reports",
+    imageUrl: "https://images.unsplash.com/photo-1599058917212-d750089bc07e?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400&q=80",
+    overlayTitle: "Marks Management System",
+    overlayDescription: "Student marking system with role-based access, branch allocation, performance tracking, and report generation.",
+    technologies: ["FastAPI", "Firebase", "HTML", "CSS", "JavaScript"],
+    liveLink: "#",
+    githubLink: "#",
   }
 ];
 
@@ -43,7 +74,6 @@ const projectsData = [
 const Works = () => {
   const [showAll, setShowAll] = useState(false);
 
-  // Determine how many projects to show
   const visibleProjects = showAll ? projectsData : projectsData.slice(0, 3);
 
   return (
@@ -64,53 +94,64 @@ const Works = () => {
           </p>
         </motion.div>
 
-        {/* Projects Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {visibleProjects.map((project, index) => (
-            <motion.div 
-              key={project.id}
-              className="project-card bg-white rounded-lg overflow-hidden shadow-lg transition-transform duration-300 hover:-translate-y-2"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-            >
-              <div className="relative">
-                <img 
-                  className="w-full h-64 object-cover" 
-                  src={project.imageUrl} 
-                  alt={project.title} 
-                />
-                <div className="project-overlay absolute inset-0 bg-primary bg-opacity-80 flex flex-col justify-center items-center opacity-0 hover:opacity-100 transition-opacity duration-300 p-6">
-                  <h4 className="text-white font-bold text-xl mb-2">{project.overlayTitle}</h4>
-                  <p className="text-white text-center mb-4">{project.overlayDescription}</p>
-                  <div className="flex flex-wrap gap-2 justify-center">
-                    {project.technologies.map((tech, i) => (
-                      <span key={i} className="bg-white text-primary text-xs px-2 py-1 rounded-full">{tech}</span>
-                    ))}
+          <AnimatePresence>
+            {visibleProjects.map((project, index) => (
+              <motion.div 
+                key={project.id}
+                className="project-card bg-white rounded-lg overflow-hidden shadow-lg transition-transform duration-300 hover:-translate-y-2"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -20 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+              >
+                <div className="relative group">
+                  <img 
+                    className="w-full h-64 object-cover" 
+                    src={project.imageUrl} 
+                    alt={project.title} 
+                  />
+                  <div className="absolute inset-0 bg-primary bg-opacity-0 group-hover:bg-opacity-80 transition-all duration-500 flex flex-col justify-center items-center opacity-0 group-hover:opacity-100 p-6">
+                    <h4 className="text-white font-bold text-xl mb-2 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">{project.overlayTitle}</h4>
+                    <p className="text-white text-center mb-4 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500 delay-100">{project.overlayDescription}</p>
+                    <div className="flex flex-wrap gap-2 justify-center transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500 delay-200">
+                      {project.technologies.map((tech, i) => (
+                        <span key={i} className="bg-white text-primary text-xs px-2 py-1 rounded-full">{tech}</span>
+                      ))}
+                    </div>
                   </div>
                 </div>
-              </div>
-              <div className="p-6">
-                <h3 className="font-montserrat font-bold text-xl mb-2">{project.title}</h3>
-                <p className="text-gray-600 mb-4">{project.description}</p>
-                <a href="#" className="text-primary font-medium hover:underline flex items-center">
-                  View Project
-                  <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
-                  </svg>
-                </a>
-              </div>
-            </motion.div>
-          ))}
+                <div className="p-6">
+                  <h3 className="font-montserrat font-bold text-xl mb-2">{project.title}</h3>
+                  <p className="text-gray-600 mb-4">{project.description}</p>
+                  <div className="flex justify-between">
+                    <a href={project.liveLink} target="_blank" rel="noopener noreferrer" className="text-primary font-medium hover:underline flex items-center">
+                      Live Link
+                      <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                      </svg>
+                    </a>
+                    <a href={project.githubLink} target="_blank" rel="noopener noreferrer" className="text-primary font-medium hover:underline flex items-center">
+                      GitHub
+                      <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+              </motion.div>
+            ))}
+          </AnimatePresence>
         </div>
 
         <div className="text-center mt-12">
           <motion.button
             onClick={() => setShowAll(!showAll)}
-            className="inline-block bg-primary text-white px-8 py-3 rounded-lg font-medium hover:bg-opacity-90 transition duration-500"
+            className="inline-block bg-primary text-white px-8 py-3 rounded-lg font-medium hover:bg-opacity-90 transition-all duration-500"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
+            animate={{ y: 0 }}
+            initial={{ y: 10 }}
           >
             {showAll ? "VIEW LESS PROJECTS" : "VIEW ALL PROJECTS"}
           </motion.button>

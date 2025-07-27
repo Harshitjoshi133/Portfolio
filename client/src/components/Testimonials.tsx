@@ -2,16 +2,22 @@ import { motion } from "framer-motion";
 
 const testimonials = [
   {
-    name: "Jacob Williams",
-    position: "Product Manager, TechCorp",
-    image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&h=150&q=80",
-    quote: "Harshit Joshi delivered our project ahead of schedule with exceptional attention to detail. His ability to translate our vision into a functioning website while adding valuable insights made the entire process smooth and successful."
+    name: "Daksh Khosla",
+    position: "Client",
+    image: "https://media.licdn.com/dms/image/D5603AQH29ZJ7Q4ZJ7A/profile-displayphoto-shrink_400_400/0/1718864327549?e=1727308800&v=beta&t=jR9aYl2Q2R9lY2Q2R9lY2Q2R9lY2Q2R9lY2Q2R9lY",
+    quote: "Harshit is a very talented and hardworking individual. He is a quick learner and has a great attitude. He is a great team player and is always ready to help others. I wish him all the best for his future endeavors."
   },
   {
-    name: "Lucas Alexander",
-    position: "Creative Director, DesignHub",
-    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&h=150&q=80",
-    quote: "Working with Harshit Joshi was a revelation. His technical expertise combined with an eye for design resulted in a product that exceeded our expectations. He's responsive, proactive, and consistently delivers high-quality work."
+    name: "Vaibhav Bhatt",
+    position: "Client",
+    image: "https://media.licdn.com/dms/image/D5603AQH29ZJ7Q4ZJ7A/profile-displayphoto-shrink_400_400/0/1718864327549?e=1727308800&v=beta&t=jR9aYl2Q2R9lY2Q2R9lY2Q2R9lY2Q2R9lY2Q2R9lY",
+    quote: "Harshit is a very talented and hardworking individual. He is a quick learner and has a great attitude. He is a great team player and is always ready to help others. I wish him all the best for his future endeavors."
+  },
+  {
+    name: "Aman Bassi",
+    position: "Client",
+    image: "https://media.licdn.com/dms/image/D5603AQH29ZJ7Q4ZJ7A/profile-displayphoto-shrink_400_400/0/1718864327549?e=1727308800&v=beta&t=jR9aYl2Q2R9lY2Q2R9lY2Q2R9lY2Q2R9lY2Q2R9lY",
+    quote: "Harshit is a very talented and hardworking individual. He is a quick learner and has a great attitude. He is a great team player and is always ready to help others. I wish him all the best for his future endeavors."
   }
 ];
 
@@ -34,7 +40,7 @@ const Testimonials = () => {
           </p>
         </motion.div>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {testimonials.map((testimonial, index) => (
             <motion.div 
               key={index}
@@ -55,9 +61,9 @@ const Testimonials = () => {
                   <p className="text-gray-600">{testimonial.position}</p>
                 </div>
               </div>
-              <p className="text-gray-700 italic">
+              <blockquote className="text-gray-700 italic border-l-4 border-primary pl-4">
                 "{testimonial.quote}"
-              </p>
+              </blockquote>
             </motion.div>
           ))}
         </div>

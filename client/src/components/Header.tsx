@@ -29,7 +29,7 @@ const Header = () => {
     <header className={`fixed top-0 left-0 right-0 bg-white z-50 ${isScrolled ? 'shadow-sm' : ''}`}>
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-4">
-          <a href="#" className="font-montserrat font-bold text-2xl text-primary">Harshit Joshi</a>
+          <a href="#home" className="font-montserrat font-bold text-3xl text-primary">Harshit Joshi</a>
           
           {/* Mobile menu button */}
           <div className="lg:hidden">
@@ -46,15 +46,15 @@ const Header = () => {
           
           {/* Desktop Navigation */}
           <nav className="hidden lg:flex space-x-8">
-            <a href="#home" className="nav-link text-dark hover:text-primary transition duration-300 font-medium">HOME</a>
-            <a href="#works" className="nav-link text-dark hover:text-primary transition duration-300 font-medium">WORKS</a>
-            <a href="#about" className="nav-link text-dark hover:text-primary transition duration-300 font-medium">ABOUT</a>
-            <a href="#contact" className="nav-link text-dark hover:text-primary transition duration-300 font-medium">CONTACT</a>
+            <a href="#home" className="nav-link text-dark hover:text-primary transition duration-300 font-medium text-lg">HOME</a>
+            <a href="#works" className="nav-link text-dark hover:text-primary transition duration-300 font-medium text-lg">WORKS</a>
+            <a href="#about" className="nav-link text-dark hover:text-primary transition duration-300 font-medium text-lg">ABOUT</a>
+            <a href="#contact" className="nav-link text-dark hover:text-primary transition duration-300 font-medium text-lg">CONTACT</a>
           </nav>
           
           {/* Contact Button */}
           <div className="hidden lg:block">
-            <a href="#contact" className="bg-primary text-white px-4 py-2 rounded hover:bg-opacity-90 transition duration-300 font-medium">
+            <a href="#contact" className="bg-primary text-white px-4 py-2 rounded hover:bg-opacity-90 transition duration-300 font-medium transform hover:scale-105">
               GET IN TOUCH
             </a>
           </div>
