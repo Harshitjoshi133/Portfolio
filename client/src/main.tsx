@@ -5,23 +5,23 @@ import "./index.css";
 // Add meta tags for SEO
 const metaDescription = document.createElement('meta');
 metaDescription.name = 'description';
-metaDescription.content = 'Professional portfolio of Harshit Joshi, a passionate frontend developer specializing in creating responsive, accessible, and beautiful web experiences.';
+metaDescription.content = 'Portfolio of Harshit Joshi, an AI & Backend Specialist building scalable architectures, FastAPI/Node services, RAG retrieval pipelines, and production AI agent workflows.';
 document.head.appendChild(metaDescription);
 
 // Add title
 const titleTag = document.createElement('title');
-titleTag.textContent = 'Harshit Joshi | Frontend Developer Portfolio';
+titleTag.textContent = 'Harshit Joshi | AI & Backend Specialist';
 document.head.appendChild(titleTag);
 
 // Add Open Graph tags
 const ogTitle = document.createElement('meta');
 ogTitle.setAttribute('property', 'og:title');
-ogTitle.content = 'Harshit Joshi | Frontend Developer Portfolio';
+ogTitle.content = 'Harshit Joshi | AI & Backend Specialist';
 document.head.appendChild(ogTitle);
 
 const ogDescription = document.createElement('meta');
 ogDescription.setAttribute('property', 'og:description');
-ogDescription.content = 'Professional portfolio of Harshit Joshi, a passionate frontend developer specializing in creating responsive, accessible, and beautiful web experiences.';
+ogDescription.content = 'Portfolio of Harshit Joshi, an AI & Backend Specialist building scalable architectures, FastAPI/Node services, RAG retrieval pipelines, and production AI agent workflows.';
 document.head.appendChild(ogDescription);
 
 const ogType = document.createElement('meta');

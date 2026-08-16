@@ -39,6 +39,35 @@ interface CaseStudy {
 
 const caseStudiesData: CaseStudy[] = [
   {
+    id: "move-with-aman",
+    title: "Move with Aman — Studio Management & CMS Platform",
+    subtitle: "End-to-End Studio Operations, Custom Content CMS, Event Ticketing & WhatsApp Lead Management",
+    category: "Full-Stack SaaS & Studio CRM",
+    image: "/images/mwa.png",
+    problem: "The studio owner required a consolidated platform to run fitness operations, manage workshops and live events, edit website content on the fly without developer dependencies, and automate lead conversions via direct WhatsApp CRM integration.",
+    architecture: {
+      stack: ["Next.js", "React", "Node.js", "Payment Gateway", "WhatsApp API", "Tailwind CSS", "PostgreSQL"],
+      details: "Architected a high-performance studio management system and CMS portal. Features dynamic content editing with real-time preview, secure payment gateway checkout, automated event ticket booking, and webhook-driven WhatsApp API integration for instant lead notifications and customer follow-up.",
+      highlights: [
+        "Custom CMS portal with dynamic content editing & instant live preview",
+        "Integrated secure payment gateway for event passes, classes & memberships",
+        "Automated WhatsApp API lead management & instant customer alert triggers",
+        "Comprehensive event management, workshop scheduler, and attendee tracking",
+        "Role-based studio admin portal with analytics & member CRM"
+      ]
+    },
+    businessImpact: {
+      metrics: [
+        { label: "Lead Conversion Lift", value: "+45%" },
+        { label: "Event Booking Velocity", value: "3x Faster" },
+        { label: "Content Update Time", value: "Instant" },
+        { label: "Payment Success Rate", value: "99.8%" }
+      ],
+      summary: "Streamlined studio operations and client bookings under one roof, boosting lead response times to seconds via WhatsApp and automating 100% of event ticketing and payments."
+    },
+    liveUrl: "https://movewithaman.co.in/"
+  },
+  {
     id: "spentilo",
     title: "Spentilo — Financial Intelligence Platform",
     subtitle: "AI-Powered Expense Automation & Financial Anomaly Engine",
@@ -63,9 +92,7 @@ const caseStudiesData: CaseStudy[] = [
         { label: "API Query Latency", value: "<18ms" }
       ],
       summary: "Transformed an error-prone 140-hour monthly manual task into a sub-second automated workflow, enabling scalable processing without extra back-office overhead."
-    },
-    liveUrl: "https://spentilo.vercel.app",
-    githubUrl: "https://github.com/Harshitjoshi133/Spentilo"
+    }
   },
   {
     id: "docusort",
@@ -92,38 +119,7 @@ const caseStudiesData: CaseStudy[] = [
         { label: "Search Retrieval Speed", value: "<35ms" }
       ],
       summary: "Replaced manual data entry with instant AI classification and RAG search, allowing teams to query complex document vaults in seconds."
-    },
-    liveUrl: "https://spentilo.vercel.app", // Active project link showcase
-    githubUrl: "https://github.com/Harshitjoshi133"
-  },
-  {
-    id: "high-throughput-payment-pipeline",
-    title: "High-Throughput Payment Microservice",
-    subtitle: "Real-Time Payment Webhook & Async Analytics Microservice (Client Work / NDA)",
-    category: "Scalable Backend Systems",
-    image: "/images/mwa.png",
-    problem: "A high-growth subscription platform experienced severe API timeouts, race conditions, and dropped webhook payloads during peak billing spikes, causing revenue reconciliation discrepancies.",
-    architecture: {
-      stack: ["Python", "FastAPI", "PostgreSQL", "Redis Queue", "Celery", "Docker", "AWS"],
-      details: "Re-architected the monolithic backend into decoupled async microservices. Webhooks are immediately acknowledged (sub-5ms) and pushed to a Redis/Celery queue for asynchronous transactional processing and database sync.",
-      highlights: [
-        "Non-blocking webhook receiver with sub-5ms response guarantee",
-        "Idempotency keys preventing double-charging or state corruption",
-        "Automated Celery retry policy with exponential backoff",
-        "PostgreSQL connection pooling with PgBouncer under high concurrency"
-      ]
-    },
-    businessImpact: {
-      metrics: [
-        { label: "Webhook Event Loss Rate", value: "0.00%" },
-        { label: "Max Tested Throughput", value: "5,200 req/s" },
-        { label: "Platform System Uptime", value: "99.99%" },
-        { label: "Failed Payment Recovery", value: "+31%" }
-      ],
-      summary: "Achieved 100% webhook ingestion reliability under massive load spikes, recovering significant previously lost revenue retries."
-    },
-    liveUrl: "#",
-    githubUrl: "#"
+    }
   },
   {
     id: "enterprise-agent-router",
@@ -150,9 +146,7 @@ const caseStudiesData: CaseStudy[] = [
         { label: "Data Compliance Rate", value: "100%" }
       ],
       summary: "Automated 76% of routine operational queries with strict data privacy compliance and instant real-time escalation."
-    },
-    liveUrl: "#",
-    githubUrl: "#"
+    }
   }
 ];
 
@@ -160,11 +154,11 @@ const FeaturedCaseStudies = () => {
   const [selectedCase, setSelectedCase] = useState<CaseStudy | null>(null);
 
   return (
-    <section id="case-studies" className="py-24 bg-[#070a0f] relative overflow-hidden">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+    <section id="case-studies" className="py-20 bg-[#070a0f] relative overflow-hidden">
+      <div className="max-w-[1550px] mx-auto px-4 sm:px-8 lg:px-12 relative z-10">
         
         {/* Header */}
-        <div className="text-center max-w-3xl mx-auto space-y-4 mb-16">
+        <div className="text-center max-w-4xl mx-auto space-y-4 mb-16">
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-cyan-950/40 border border-cyan-500/30 text-xs font-mono text-cyan-400 font-medium">
             <Layers className="w-3.5 h-3.5" />
             <span>REAL-WORLD MEASURABLE ROI</span>

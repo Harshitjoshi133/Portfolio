@@ -48,11 +48,11 @@ const processSteps = [
 
 const WorkingWithMe = () => {
   return (
-    <section id="process" className="py-24 bg-[#080c14] border-t border-slate-800/80 relative overflow-hidden">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+    <section id="process" className="py-20 bg-[#080c14] border-t border-slate-800/80 relative overflow-hidden">
+      <div className="max-w-[1550px] mx-auto px-4 sm:px-8 lg:px-12 relative z-10">
         
         {/* Title */}
-        <div className="text-center max-w-3xl mx-auto space-y-4 mb-16">
+        <div className="text-center max-w-4xl mx-auto space-y-4 mb-16">
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-950/40 border border-emerald-500/30 text-xs font-mono text-emerald-400 font-medium">
             <Workflow className="w-3.5 h-3.5" />
             <span>HOW WE COLLABORATE</span>

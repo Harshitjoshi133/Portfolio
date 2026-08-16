@@ -92,11 +92,11 @@ const ProjectEstimator = ({ onOpenBookingModal }: EstimatorProps) => {
   };
 
   return (
-    <section id="estimator" className="py-24 bg-[#070a0f] border-t border-slate-800/80 relative overflow-hidden">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+    <section id="estimator" className="py-20 bg-[#070a0f] border-t border-slate-800/80 relative overflow-hidden">
+      <div className="max-w-[1550px] mx-auto px-4 sm:px-8 lg:px-12 relative z-10">
         
         {/* Title */}
-        <div className="text-center max-w-3xl mx-auto space-y-4 mb-14">
+        <div className="text-center max-w-4xl mx-auto space-y-4 mb-14">
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-cyan-950/40 border border-cyan-500/30 text-xs font-mono text-cyan-400 font-medium">
             <Calculator className="w-3.5 h-3.5" />
             <span>INTERACTIVE SCOPE BUILDER</span>
@@ -301,19 +301,6 @@ const ProjectEstimator = ({ onOpenBookingModal }: EstimatorProps) => {
                 )}
               </button>
             </form>
-
-            <div className="text-center pt-2">
-              <span className="text-xs text-slate-500 font-mono">Or schedule a direct call:</span>
-              <button
-                type="button"
-                onClick={onOpenBookingModal}
-                className="w-full mt-2 py-3 rounded-xl font-mono text-xs font-semibold text-slate-200 bg-slate-900 hover:bg-slate-800 border border-slate-700 transition-all flex items-center justify-center gap-2"
-              >
-                <Calendar className="w-4 h-4 text-emerald-400" />
-                <span>Book 30-Min Discovery Call Directly</span>
-              </button>
-            </div>
-
           </div>
 
         </div>

@@ -3,7 +3,7 @@ import { Mail, Github, Globe2, ShieldCheck, ArrowUpRight } from "lucide-react";
 const Footer = () => {
   return (
     <footer className="bg-[#05070a] border-t border-slate-900 text-slate-400 py-16">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-[1550px] mx-auto px-4 sm:px-8 lg:px-12">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-10">
           
           <div className="md:col-span-5 space-y-4">
@@ -56,6 +56,17 @@ const Footer = () => {
               >
                 <Mail className="w-4 h-4 text-emerald-400 shrink-0" />
                 <span className="truncate">Harshithardyjoshi@gmail.com</span>
+                <ArrowUpRight className="w-3.5 h-3.5 ml-auto text-slate-500" />
+              </a>
+
+              <a 
+                href="https://linkedin.com/in/harshitjoshi20" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 p-3 rounded-xl bg-slate-900 border border-slate-800 text-slate-200 hover:border-emerald-500/50 hover:text-emerald-400 transition-all font-mono text-xs w-full"
+              >
+                <span className="w-4 h-4 rounded bg-cyan-500/20 text-cyan-400 font-bold flex items-center justify-center text-[10px]">in</span>
+                <span>linkedin.com/in/harshitjoshi20</span>
                 <ArrowUpRight className="w-3.5 h-3.5 ml-auto text-slate-500" />
               </a>
 

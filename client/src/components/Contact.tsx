@@ -10,7 +10,8 @@ import {
   CreditCard, 
   FileText, 
   MessageSquare,
-  Github
+  Github,
+  Linkedin
 } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 
@@ -20,7 +21,6 @@ const Contact = () => {
     name: "",
     email: "",
     company: "",
-    budget: "$5,000 - $10,000",
     message: "",
   });
 
@@ -40,7 +40,7 @@ const Contact = () => {
   };
 
   const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => {
     const { name, value } = e.target;
     setFormData((prev) => ({
@@ -65,7 +65,6 @@ const Contact = () => {
           name: "",
           email: "",
           company: "",
-          budget: "$5,000 - $10,000",
           message: "",
         });
         setIsSubmitting(false);
@@ -76,7 +75,6 @@ const Contact = () => {
       formPayload.append("name", formData.name);
       formPayload.append("email", formData.email);
       formPayload.append("company", formData.company);
-      formPayload.append("budget", formData.budget);
       formPayload.append("message", formData.message);
 
       const response = await fetch(formUrl, {
@@ -93,7 +91,6 @@ const Contact = () => {
           name: "",
           email: "",
           company: "",
-          budget: "$5,000 - $10,000",
           message: "",
         });
       } else {
@@ -108,7 +105,6 @@ const Contact = () => {
         name: "",
         email: "",
         company: "",
-        budget: "$5,000 - $10,000",
         message: "",
       });
     } finally {
@@ -117,11 +113,11 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="py-24 bg-[#070a0f] relative overflow-hidden border-t border-slate-800/80">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+    <section id="contact" className="py-20 bg-[#070a0f] relative overflow-hidden border-t border-slate-800/80">
+      <div className="max-w-[1550px] mx-auto px-4 sm:px-8 lg:px-12 relative z-10">
         
         {/* Title */}
-        <div className="text-center max-w-3xl mx-auto space-y-4 mb-16">
+        <div className="text-center max-w-4xl mx-auto space-y-4 mb-16">
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-950/40 border border-emerald-500/30 text-xs font-mono text-emerald-400 font-medium">
             <MessageSquare className="w-3.5 h-3.5" />
             <span>DIRECT FOUNDER ONBOARDING</span>
@@ -215,13 +211,22 @@ const Contact = () => {
               </div>
 
               {/* Social links */}
-              <div className="pt-4 border-t border-slate-800 flex items-center gap-3">
+              <div className="pt-4 border-t border-slate-800 flex items-center gap-3 flex-wrap">
                 <span className="text-xs font-mono text-slate-400">Profiles:</span>
+                <a
+                  href="https://linkedin.com/in/harshitjoshi20"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="p-2 px-3 rounded-xl bg-slate-900 hover:bg-slate-800 text-slate-300 hover:text-emerald-400 transition-colors flex items-center gap-1.5 text-xs font-mono"
+                >
+                  <Linkedin className="w-4 h-4 fill-current text-cyan-400" />
+                  <span>LinkedIn</span>
+                </a>
                 <a
                   href="https://github.com/Harshitjoshi133"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="p-2 rounded-xl bg-slate-900 hover:bg-slate-800 text-slate-300 hover:text-emerald-400 transition-colors flex items-center gap-1.5 text-xs font-mono"
+                  className="p-2 px-3 rounded-xl bg-slate-900 hover:bg-slate-800 text-slate-300 hover:text-emerald-400 transition-colors flex items-center gap-1.5 text-xs font-mono"
                 >
                   <Github className="w-4 h-4" />
                   <span>GitHub</span>
@@ -275,36 +280,18 @@ const Contact = () => {
                 </div>
               </div>
 
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                <div>
-                  <label className="block text-xs font-mono text-slate-300 mb-1.5 font-semibold">
-                    Company / Startup Name
-                  </label>
-                  <input
-                    type="text"
-                    name="company"
-                    placeholder="e.g. Apex AI Labs"
-                    value={formData.company}
-                    onChange={handleChange}
-                    className="w-full px-4 py-3 rounded-xl bg-slate-950 border border-slate-800 text-sm text-white placeholder-slate-600 focus:outline-none focus:border-emerald-500 transition-colors"
-                  />
-                </div>
-
-                <div>
-                  <label className="block text-xs font-mono text-slate-300 mb-1.5 font-semibold">
-                    Estimated Sprint Budget
-                  </label>
-                  <select
-                    name="budget"
-                    value={formData.budget}
-                    onChange={handleChange}
-                    className="w-full px-4 py-3 rounded-xl bg-slate-950 border border-slate-800 text-sm text-white focus:outline-none focus:border-emerald-500 transition-colors font-mono"
-                  >
-                    <option value="$3,000 - $5,000">$3,000 - $5,000 (Targeted Module)</option>
-                    <option value="$5,000 - $10,000">$5,000 - $10,000 (Full AI / Backend Architecture)</option>
-                    <option value="$10,000+">$10,000+ (End-to-End Enterprise MVP)</option>
-                  </select>
-                </div>
+              <div>
+                <label className="block text-xs font-mono text-slate-300 mb-1.5 font-semibold">
+                  Company / Startup Name
+                </label>
+                <input
+                  type="text"
+                  name="company"
+                  placeholder="e.g. Apex AI Labs"
+                  value={formData.company}
+                  onChange={handleChange}
+                  className="w-full px-4 py-3 rounded-xl bg-slate-950 border border-slate-800 text-sm text-white placeholder-slate-600 focus:outline-none focus:border-emerald-500 transition-colors"
+                />
               </div>
 
               <div>
